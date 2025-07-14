@@ -1,0 +1,58 @@
+{
+  "components": [
+    {
+      "label": "Legal Name",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_00jlzry",
+        "columns": null
+      },
+      "id": "Field_01gbb72",
+      "key": "legalName",
+      "description": "What is the legal name of your entity?",
+      "validate": {
+        "required": true,
+        "minLength": "3"
+      }
+    },
+    {
+      "label": "LEI(Legal Entity Identification)",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_108txlq",
+        "columns": null
+      },
+      "id": "Field_1uj1f30",
+      "key": "LeiNumber",
+      "description": "What is LEI number of your Entity?",
+      "validate": {
+        "required": true,
+        "minLength": "20",
+        "maxLength": "20"
+      }
+    },
+    {
+      "label": "Contact Email",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_0m97xzw",
+        "columns": null
+      },
+      "id": "Field_1ntzfda",
+      "key": "Contact_Email",
+      "description": "Where we can contact you?",
+      "validate": {
+        "required": true
+      }
+    }
+  ],
+  "type": "default",
+  "id": "Form_0en79uu",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.36.1"
+  },
+  "executionPlatform": "Camunda Platform",
+  "executionPlatformVersion": "7.23.0",
+  "schemaVersion": 18
+}

@@ -1,0 +1,162 @@
+{
+  "components": [
+    {
+      "label": "Legal Name",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_00jlzry",
+        "columns": null
+      },
+      "id": "Field_01gbb72",
+      "key": "legalName",
+      "description": "What is the legal name of your entity?",
+      "validate": {
+        "required": true,
+        "minLength": "3"
+      },
+      "readonly": true
+    },
+    {
+      "label": "LEI(Legal Entity Identification)",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_108txlq",
+        "columns": null
+      },
+      "id": "Field_1uj1f30",
+      "key": "LeiNumber",
+      "description": "What is LEI number of your Entity?",
+      "validate": {
+        "required": true,
+        "minLength": "20",
+        "maxLength": "20"
+      },
+      "readonly": "on"
+    },
+    {
+      "label": "Contact Email",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_0m97xzw",
+        "columns": null
+      },
+      "id": "Field_1ntzfda",
+      "key": "Contact_Email",
+      "description": "Where we can contact you?",
+      "validate": {
+        "required": true
+      },
+      "readonly": "on"
+    },
+    {
+      "label": "L1 Approval",
+      "values": [
+        {
+          "label": "Approved",
+          "value": "Yes"
+        },
+        {
+          "label": "Not Approved",
+          "value": "No"
+        }
+      ],
+      "type": "select",
+      "layout": {
+        "row": "Row_1xqer0j",
+        "columns": null
+      },
+      "id": "Field_0q29z0g",
+      "key": "FirstStepApproval",
+      "description": "Is First step verification approved?",
+      "validate": {
+        "required": true
+      },
+      "readonly": "on"
+    },
+    {
+      "label": "Comments",
+      "type": "textarea",
+      "layout": {
+        "row": "Row_1d0iez9",
+        "columns": null
+      },
+      "id": "Field_1x8x1kv",
+      "key": "FirstReviewerComments",
+      "readonly": "on",
+      "validate": {
+        "required": true
+      },
+      "description": "Comments added by L1 reviewer",
+      "conditional": {
+        "hide": "=FirstStepApproval != \"Yes\""
+      }
+    },
+    {
+      "label": "L2 Approval",
+      "values": [
+        {
+          "label": "Approved",
+          "value": "Yes"
+        },
+        {
+          "label": "Not Approved",
+          "value": "No"
+        }
+      ],
+      "type": "select",
+      "layout": {
+        "row": "Row_0rs6le6",
+        "columns": null
+      },
+      "id": "Field_0fvfhd5",
+      "key": "SecondStepApproval",
+      "description": "Is Second step verification approved?",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "Comments",
+      "type": "textarea",
+      "layout": {
+        "row": "Row_0jgy2hr",
+        "columns": null
+      },
+      "id": "Field_1vdrlhb",
+      "key": "SecondReviewerComments",
+      "description": "Final Comments",
+      "conditional": {
+        "hide": "=SecondStepApproval != \"Yes\""
+      },
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "Rejection Reason",
+      "type": "textarea",
+      "layout": {
+        "row": "Row_1ki103d",
+        "columns": null
+      },
+      "id": "Field_0o7dz6z",
+      "key": "SecondReviewerRejectionReason",
+      "description": "Reason for Rejection",
+      "conditional": {
+        "hide": "=SecondStepApproval != \"No\""
+      },
+      "validate": {
+        "required": true
+      }
+    }
+  ],
+  "type": "default",
+  "id": "Form_0en79uu",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.36.1"
+  },
+  "executionPlatform": "Camunda Platform",
+  "executionPlatformVersion": "7.23.0",
+  "schemaVersion": 18
+}

@@ -2,13 +2,23 @@ package com.osttra.alpine.dtos;
 
 import lombok.*;
 
+@Data
 @Getter
 @Setter
-@NoArgsConstructor
 @AllArgsConstructor
-@Builder
+@NoArgsConstructor
 public class KycResponseDto {
-    String instanceId;
-    String data;
-    String error;
+
+    private Long id;
+    private String processInstanceId;
+    private String taskId;
+    private String legalName;
+    private String leiNumber;
+    private String email;
+    private boolean isL1Approved;
+    private String l1Comments;
+    private String l1RejectionReason;
+    private boolean isL2Approved;
+    private String l2Comments;
+    private String l2RejectionReason;
 }
